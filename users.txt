@@ -1,0 +1,7 @@
+superUser 
+usuario : admin
+contraseña : admin
+
+usuario (ciudadano promedio)
+usuario:pvargas
+contraseña:arturo1234

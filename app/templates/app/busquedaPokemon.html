@@ -1,0 +1,30 @@
+{% extends 'app/base.html' %}
+{% load static %} 
+{% block title %}Pokedex{% endblock %}
+{% block content %}
+<br><br><br><br>
+<div class="fondo2">
+  <br>
+  <div class="container2 f">
+    <div class="row">
+      <form method="POST" id="formulario">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="txtIndicador"></label>
+          <input type="text" class="form-control controls" id="txtIndicador" required="" placeholder="Ingrese nombre del pokemon">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" id="btnInformacion">Cargar Informacion</button>
+      </form>
+    </div>
+    <br>
+    <div class="row">
+      <div id="info" class="text-center card1 controls"></div>
+    </div>
+    <br>
+  </div>
+  <br>
+</div>
+  
+  
+{% endblock %}

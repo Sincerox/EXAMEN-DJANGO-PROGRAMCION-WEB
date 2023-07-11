@@ -1,0 +1,61 @@
+{% extends "app/base.html" %}
+{% block title %}Productos En Catalogo{% endblock %}
+{% block content %}
+{% load static %} 
+<div class="fondo1"> 
+    <br><br><br><br>
+    
+    <div class="card-header">
+        <h1 class="text-center" style="background-color:white;">Lista de Productos</h1>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center">
+        <a href="{% url 'agregar' %}" class="btn btn-primary">Agregar</a>
+    </div>
+    <br>
+  
+    {% if not object_list %}
+        <h1 class="aaaa text-center">No hay productos :C</h1>
+        <br><br><br><br><br><br><br><br>
+    {% else %}
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+            <table class="table table-bordered table-striped mb-0" style="background-color:white;">
+                <div class="">
+                    <thead class="thead-dark">
+                        <tr>               
+                            <th class="text-center align-middle col-md-2 col-sm-3" scope="col">IMAGEN</th>
+                            <th class="text-center align-middle col-md-2 col-sm-3" scope="col">NOMBRE</th>
+                            <th class="text-center align-middle col-md-2 col-sm-3" scope="col">PRECIO</th>
+                            <th class="text-center align-middle col-md-3 col-sm-6" scope="col">DESCRIPCIÓN</th>
+                            <th class="text-center align-middle col-md-1 col-sm-3" colspan="2">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in object_list %}
+                        <tr>
+                            <td class="text-center align-middle col-md-2 col-sm-3">
+                                <img class="card-img-top" src="{{ producto.imagen.url }}" alt="imagen-producto" style="width: 100px; height: 100px;">
+                            </td>
+                            <td class="text-center align-middle col-md-2 col-sm-3">{{ producto.nombre }}</td>
+                            <td class="text-center align-middle col-md-2 col-sm-3">{{ producto.precio }}</td>
+                            <td class="text-center align-middle col-md-3 col-sm-6">{{ producto.descripcion }}</td>
+                            <td class="text-center align-middle col-md-1 col-sm-3">
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-primary" href="{% url 'editarP' producto.id %}">Editar</a>
+                                </div>
+                            </td>
+                            <td class="text-center align-middle col-md-1 col-sm-3">
+                                <div class="d-flex justify-content-center">
+                                    <a class="btn btn-danger" href="{% url 'borrarP' producto.id %}">Eliminar</a>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </div>
+            </table>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

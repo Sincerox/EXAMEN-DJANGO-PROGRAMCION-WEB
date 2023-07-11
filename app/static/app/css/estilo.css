@@ -1,0 +1,379 @@
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 100px auto;
+  width: 60%;
+}
+
+.aaaa {
+  color: rgb(211, 150, 38);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container2 {
+  width: 30%;
+  margin: auto;
+}
+
+.container3 {
+  width: 40%;
+  margin: auto;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+.container4 {
+  width: 50%;
+  margin: auto;
+}
+
+.container44 {
+  width: 40%;
+  height: 20%;
+  margin: auto;
+}
+
+body {
+  background-color: #212529;
+}
+
+.cuerpa {
+  background-image: url("{% static 'app/img/pokemon.png' %}");
+  background-position: center;
+}
+
+.formulario {
+  width: 50%;
+  box-sizing: border-box;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.formulario-letra {
+  color: black;
+  font-size: 120px;
+}
+
+.caratula-imagen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.caratula-imagen2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-content: center;
+  margin: 40px auto 100px auto;
+  gap: 5px;
+}
+
+.indexMenu {
+  display: flex;
+}
+
+.indexMenu-juegos {
+  display: grid;
+  grid-template-columns: 1;
+  width: 70%;
+  height: 100%;
+}
+
+.indexMenu-Plataforma {
+  display: grid;
+  grid-template-columns: 1;
+  width: 30%;
+  height: 100%;
+}
+
+.indexMenuu {
+  display: grid;
+  grid-template-columns: 1;
+  width: 20%;
+  height: 100%;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.indexMenuuu {
+  display: grid;
+  grid-template-columns: 1;
+  width: 20%;
+  height: 100%;
+}
+
+.banner-index {
+  width: 100%;
+  height: auto; /* Cambiar a 'auto' */
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+.banner-index-text {
+  width: 100%;
+  height: 350px;
+}
+
+.catalogos {
+  background-color: white;
+}
+
+.nombreObjetos {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+}
+
+.infoObjetos {
+  color: grey;
+  font-size: 10px;
+}
+
+.precios {
+  width: auto;
+  min-width: 20px;
+  color: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.margen {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.caratulas {
+  display: grid;
+  grid-auto-rows: 30rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 0.5fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.tamaño {
+  width: 100%;
+  min-height: 200px;
+  object-position: center;
+}
+
+.logotipo {
+  width: 100%;
+}
+
+.titulos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-style: italic;
+  object-position: center;
+}
+
+.textos {
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgb(2, 2, 2);
+  text-transform: uppercase;
+}
+
+.card {
+  border-radius: 10px;
+  min-height: 200px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.fondo {
+  background-image: url('/static/app/img/zelda.jpg');
+  background-repeat: round;
+}
+
+.fondo1 {
+  background-image: url('/static/app/img/ad.jpg');
+  background-repeat: round;
+}
+
+.fondo2 {
+  background-image: url('/static/app/img/pokemon1.png');
+  background-repeat: round;
+}
+
+.fondo3 {
+  background-image: url('/static/app/img/f.jpg');
+  background-repeat: round;
+}
+
+
+.card1 {
+  border-radius: 10px;
+  min-height: 200px;
+  font-weight: bold;
+  padding: 20px;
+  color: blueviolet;
+  background-color: white;
+}
+
+.controls {
+  box-shadow: 2px 2px 16px #000;
+}
+
+.error-input {
+  border: 1px solid rgba(238, 58, 58, 0.358);
+  background-color: #ff979754;
+  box-shadow: 2px 2px 16px rgba(232, 62, 62, 0.4);
+}
+
+
+.error-input:focus {
+  outline: none;
+  border-color: #e83e3e;
+  box-shadow: 2px 2px 16px rgba(232, 62, 62, 0.8);
+}
+
+
+.error-message {
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 5px;
+  background-color: rgba(232, 62, 62, 0.477);
+  padding: 5px;
+  border-radius: 4px;
+}
+.row2{
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.8);
+}
+
+.menux-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 25%;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+
+
+.menux-container img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform 0.5s;
+}
+.img-cover {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.menux-container img {
+  transition: transform 0.5s;
+}
+
+.menux-container:hover img {
+  transform: scale(1.1);
+}
+
+.carousel-image,
+.menux-image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover,
+.menux-image:hover {
+  transform: scale(1.1);
+}
+
+.row33 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100%;
+}
+
+.col22 {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid black;
+  height: 100%;
+  min-height: 200px;
+}
+
+
+
+.menux-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+
+@media screen and (min-width: 768px) {
+  .row33 {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .arousel-inner {
+    max-height: 200px;
+    max-width: 200px;
+    position: absolute;
+  }
+  
+}
+
+
+.carousel-inner{
+  height: 100%;
+  width: 100%;
+  max-height: 600px;
+  max-width: 900px;
+ }
+ .carousel-inner img {
+  width: 100%;
+  object-fit: fill;
+} 
+.aw{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-custom-scrollbar {
+  position: relative;
+  height: 255px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+  width: 100%;
+  
+  object-fit: fill;
+}
+
+@media (max-width: 768px) {
+  .my-custom-scrollbar {
+    height: 150px;
+  }
+}
+
+.f{
+  width: 30%;
+  min-width: 300px;
+}

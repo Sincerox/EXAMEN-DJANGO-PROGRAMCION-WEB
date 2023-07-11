@@ -1,0 +1,50 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Sugerencia{% endblock %}
+{% block content %}
+<div class="fondo">
+    <br><br><br>  <br><br><br>
+        <div class="container formulario f" id="info">
+            <!-- Inicio form -->
+            <form method="POST" id="formulario1">
+                <div class="form-group  ">
+                    <label for="id_txtEmail"></label>
+                    <input type="email" name="txtEmail" class="form-control controls" id="id_txtEmail"
+                        placeholder="Ingrese su email aquí">
+                </div>
+                <div class="form-group ">
+                    <label for="id_txtNombre"></label>
+                    <input type="text" class="form-control controls" name="txtNombre" required="" id="id_txtNombre"
+                        placeholder="Ingrese su Nombre">
+                </div>
+                <div class="form-group ">
+                    <label for="id_txtApellido"></label>
+                    <input type="text" class="form-control controls" name="txtApellido" required="" id="id_txtApellido"
+                        placeholder="Ingrese su Apellido">
+                </div>
+                <div class="form-group ">
+                    <label for="id_txtTipoSugerencia"></label>
+                    <input type="text" class="form-control controls" name="txtSugerencia" required="" id="id_txtSugerencia"
+                        placeholder="Ingrese Tipo de Sugerencia">
+                </div>
+                <div class="form-group ">
+                    <label for="id_txtDetalle"></label>
+                    <textarea class="form-control controls" name="txtMensaje" required="" id="id_txtMensaje" rows="4" cols="4"
+                        placeholder="Ingrese Mensaje"></textarea>
+                </div>
+                <br>
+                <div class="form-check">
+                    <button type="submit" class="btn btn-light ">Enviar</button>
+                </div>
+                <br>
+                <div class="alert alert-success" style="display: none;">    
+                </div>
+                <div class="alert alert-danger" style="display: none;">
+                </div>
+                <br>
+            </form>
+        </div>
+    <br><br><br>  <br><br><br>
+</div>
+
+{% endblock %}

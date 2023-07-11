@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    {% load static %}
+    <div class="fixed-top ww">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+          <a class="rounded mx-auto d-block" href="{% url 'index' %}">
+            <img src="{% static 'app/img/logos/factoria.png'%}" width="200" height="100" class="img-fluid"  alt="LOGOTIPO" class="rounded mx-auto d-block"></a>
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'catalogo' %}">Catalogo</a>
+                </li>   
+                <li class="nav-item">
+                  <a class="nav-link" href="{%url 'pokedex' %}">Api Pokedex</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{%url 'form' %}">Formulario</a>
+                </li>
+                {% if user.is_authenticated %}
+                  {% if user.is_staff %}
+                    <li class="nav-item ">
+                      <a class="nav-link" href="{%url 'listarproducto' %}">Gestionar Productos </a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              </ul>
+              {% if user.is_authenticated %}
+                <li class="nav-item dropdown d-lg-inline-block mb-3 mb-md-0 ml-md-3">
+                  <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">@{{ user.username | title }}</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a href="{% url 'logout' %}" class="dropdown-item">Cerrar Sesión</a></li>
+                  </ul>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a href="{% url 'login' %}" class="nav-link">Iniciar Sesión</a>
+                </li>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+    </div>
+</body>
+</html>

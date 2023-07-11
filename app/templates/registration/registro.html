@@ -1,0 +1,44 @@
+{% extends 'app/base.html' %}
+{% block title %} Registro {% endblock %}
+{% block content %}
+{% include "app/navPlantilla.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+<br><br><br>
+
+<div class="fondo">
+    <br><br>
+    <div class="container f">
+        <div class="row">
+            <div class="col-16">
+                <div class="card">
+                    <div class="card-body bg-white">
+                        <h2 class="text-dark text text-center">Registro de Usuario</h2>
+                        <hr class="text-dark">
+                        {% if messages %}
+                            <div class="alert alert-success">
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                                <br>
+                                <a href="{% url 'index' %}" class="btn btn-success">OK</a>
+                            </div>
+                        {% else %}
+                            <form action="{% url 'registro' %}" method="post">
+                                {% csrf_token %}
+                                {{ form | crispy }}
+                                <br>
+                                <a href="{% url 'index' %}">Ir al Inicio</a> |
+                                <a href="{% url 'login' %}">Iniciar Sesión</a>
+                                <input type="submit" value="Ingresar" class="btn btn-success float-end">
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br>
+</div>
+
+{% endblock %}

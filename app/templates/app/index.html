@@ -1,0 +1,82 @@
+{% extends "app/base.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+{% load static%}
+<br><br><br><br>
+<div class="margenn">
+  <div class="fondo">
+    {% if messages %}
+    <br><br>
+    <div class="container f">
+      <div class="row">
+        <div class="col-16">
+          <div class="card">
+            <div class="card-body bg-white">
+              <h2 class="text-dark text text-center">ACCESO SOLO PARA ADMINISTRADORES</h2>
+              <hr class="text-dark">
+              <div class="alert alert-danger">
+                {% for message in messages %}
+                {{ message }}
+                <br>
+                {% endfor %}
+                <a href="{% url 'index' %}" class="btn btn-danger">OK</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br><br>
+    {% else %}
+    <div id="myCarousel" class="carousel carousel-dark slide aw" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="{% url 'catalogo' %}"><img src="{% static 'app/img/sw2.jpg'%}" class="img-fluid carousel-image "
+              alt="BANNER"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="{% url 'catalogo' %}"><img src="{% static 'app/img/xbb.jpg' %}" class="img-fluid carousel-image "
+              alt="BANNER"></a>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+    <div class="row33">
+      <div class="col22 menux-container">
+        <img src="{% static 'app/img/bannerIndexRs.png' %}" class="img-fluid menux-image" alt="BANNER">
+      </div>
+      <div class="col22 menux-container">
+        <img src="{% static 'app/img/bannerXbox.jpg' %}" class="img-fluid menux-image" alt="BANNER">
+      </div>
+    </div>
+    <div class="row33">
+      <div class="col22 menux-container">
+        <img src="{% static 'app/img/bannerIndexPlao.jpg' %}" class="img-fluid menux-image" alt="BANNER">
+      </div>
+      <div class="col22 menux-container">
+        <img src="{% static 'app/img/bannerPlay.jpg' %}" class="img-fluid menux-image" alt="BANNER">
+      </div>
+    </div>
+    <div class="row33">
+      <div class="col22 menux-container">
+        <img src="{% static 'app/img/bannerIndexNintendo.jpg' %}" class="img-fluid menux-image" alt="BANNER">
+      </div>
+      <div class="col22 menux-container">
+        <img src="{% static 'app/img/bannerNintendo.jpg' %}" class="img-fluid menux-image" alt="BANNER">
+      </div>
+    </div>
+    <br><br><br>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
